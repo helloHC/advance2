@@ -1,3 +1,5 @@
+import List "mo:base/List";
+
 module {
   public type Operations = {
     #create;
@@ -12,7 +14,7 @@ module {
 		wasmCode:  ?Nat8;
 		operation: Operations;
 		canisterID:  ?Principal;
-		approvers: [Principal];
+		approvers: List.List<Principal>;
 		done: Bool;
 	};
 }
